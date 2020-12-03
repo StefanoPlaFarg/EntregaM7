@@ -108,20 +108,32 @@ public void createVideo(Video video) {
 	videoList.add(video);
 }
 
-public Video getVideoByTitle(String Title) {
-	
-	for (Video video: videoList) {
-		
-		if ()
-		
+public Video getVideoByTitle(String title) {
+
+	for (Video video : videoList) {
+
+		if (video.getTitle().equals(title)) {
+
+			return video;
+		}
+
 	}
-	
-	return new Video();
-	//TODO acabar el return
+
+	return null;
+
 }
 
 public Video getVideoByUrl(String url) {
-	return new Video();
-	//TODO acabar el return
+	for (Video video : videoList) {
+
+		if (video.getTitle().equals(url)) {
+
+			return video;
+		}
+
+	}
+
+	return null;
+
 }
 }

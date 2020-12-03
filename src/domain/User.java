@@ -17,7 +17,7 @@ public class User {
 	private String surname;
 	private String password;
 	protected Timestamp timeStamp;
-	protected List<Video> wheels = new ArrayList<Video>();
+	protected ArrayList<Video> videoList;
 	
 	
 	public User () {
@@ -25,11 +25,21 @@ public class User {
 		
 	}
 	
-   public User (String name, String surname, String password, Timestamp timeStamp  ) {
+   public User (String name, String surname, String password, Timestamp timeStamp  )throws Exception {
+	    if (name.equals(""))
+			throw new Exception("Falta introduir el nom");
+		if (surname.equals(""))
+			throw new Exception("Falta introduir el cognom");
+		if (password.equals(""))
+			throw new Exception("Falta introduir el password");
+		if (timeStamp.toString().equals(""))
+			throw new Exception("Falta introduir el timestamp");
+	   
 	   this.name=name;
 	   this.surname=surname;
 	   this.password=password;
 	   this.timeStamp=timeStamp;
+	   videoList = new ArrayList<Video>();
 	}
 
 /**
@@ -89,5 +99,19 @@ public void setTimeStamp(Timestamp timeStamp) {
 }
    
    
+public ArrayList<Video> getVideoList () {
+	
+	return videoList;
+}
+
+public void createVideo(Video video) {
+	videoList.add(video);
+}
+
+public Video getVideoByTitle(String Title) {
+	return new Video();
+	//TODO acabar el return
+}
+
 
 }

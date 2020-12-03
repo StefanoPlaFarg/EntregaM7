@@ -104,7 +104,7 @@ public ArrayList<Video> getVideoList () {
 	return videoList;
 }
 
-public void createVideo(Video video) {
+public void addVideo(Video video) {
 	videoList.add(video);
 }
 

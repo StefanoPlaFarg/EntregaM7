@@ -109,9 +109,19 @@ public void createVideo(Video video) {
 }
 
 public Video getVideoByTitle(String Title) {
+	
+	for (Video video: videoList) {
+		
+		if ()
+		
+	}
+	
 	return new Video();
 	//TODO acabar el return
 }
 
-
+public Video getVideoByUrl(String url) {
+	return new Video();
+	//TODO acabar el return
+}
 }

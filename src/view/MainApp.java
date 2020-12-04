@@ -37,7 +37,7 @@ public class MainApp {
 			String printName = controller.getUser(name, surname, password).getName();
 			String printSurname = controller.getUser(name, surname, password).getSurname();
 			Timestamp printTimestamp = controller.getUser(name, surname, password).getTimeStamp();
-			System.out.print("L'usuari " + printName + printSurname + " s'ha creat en l'instant: " + printTimestamp);
+			System.out.print("L'usuari " + printName + " "+ printSurname + " s'ha creat en l'instant: " + printTimestamp +"\n");
 
 		} catch (Exception e) {
 
@@ -45,7 +45,7 @@ public class MainApp {
 
 		}
 
-		System.out.println("Creació d'un video:");
+		System.out.println("Creació d'un video al següent usuari:");
 		System.out.println("Introdueix el nom de l'usuari:");
 		name = sc.nextLine();
 		System.out.println("Introdueix el cognom de l'usuari:");
@@ -70,7 +70,7 @@ public class MainApp {
 			String printSurname = controller.getUser(name, surname, password).getSurname();
 			String allTitles = controller.getAllVideos(printName, printSurname, password);
 
-			System.out.print("L'usuari " + printName + printSurname + " disposa dels videos: " + allTitles);
+			System.out.print("L'usuari " + printName +" "+ printSurname + " disposa dels videos: " + allTitles);
 
 		} catch (Exception e) {
 

@@ -114,14 +114,30 @@ public ArrayList<Video> getVideoList () {
 
 public void addVideo(String title) throws Exception{
 	
-	if  (getVideoByTitle(title)==null) {
-		
-		videoList.add(new Video (title));
-	}else {
-		
+	if  (containsVideo(title)==true) {
 		throw new Exception ("El video ja existeix");
+		
+	}else {
+		videoList.add(new Video (title));
+		
 	}
 	
+}
+
+
+public boolean containsVideo(String title) {
+
+	for (Video video : videoList) {
+
+		if (video.getTitle().equals(title)) {
+
+			return true;
+		}
+
+	}
+
+	return false;
+
 }
 
 

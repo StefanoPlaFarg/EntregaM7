@@ -39,11 +39,14 @@ public class Controller {
 	
 	public User getUser (String name, String surname, String password) {
 		
-		for (ArrayList<User> user:repository) {
+		for (User user:repository.getAllUsers()) {
 			
+			if (user.getName().equals(name)&& user.getSurname().equals(surname)&& user.getPassword().equals(password)) {
+				return user;
+			}
 		}
 		
-		return
+		return null;
 	}
 	
 	

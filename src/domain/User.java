@@ -110,9 +110,20 @@ public ArrayList<Video> getVideoList () {
 	return videoList;
 }
 
-public void addVideo(Video video) {
-	videoList.add(video);
+
+
+public void addVideo(String title) throws Exception{
+	
+	if  (getVideoByTitle(title)==null) {
+		
+		videoList.add(new Video (title));
+	}else {
+		
+		throw new Exception ("El video ja existeix");
+	}
+	
 }
+
 
 public Video getVideoByTitle(String title) {
 

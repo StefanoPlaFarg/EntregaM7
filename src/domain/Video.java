@@ -23,6 +23,14 @@ public class Video {
 		
 	}
 	
+	public Video( String title) {
+
+		this.url = null;
+		this.title = title;
+		tagsList = new ArrayList<String> ();
+
+	}
+	
 	public Video(String url, String title) {
 
 		this.url = url;

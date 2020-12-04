@@ -7,6 +7,8 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 /**
  * @author stefano
  *
@@ -174,4 +176,26 @@ public Video getVideoByUrl(String url) throws Exception{
 	return null;
 
 }
+
+public String getAllTitlesOfVideos() throws Exception {
+
+	String titlesList = "";
+
+	if (videoList == null) {
+		titlesList = "L'usuari no té videos";
+
+	} else {
+
+		for (Video video : videoList) {
+
+			titlesList = titlesList + video.getTitle() + " ";
+
+		}
+
+	}
+
+	return titlesList;
+
+}
+
 }

@@ -37,7 +37,15 @@ public class Controller {
 		
 	}
 	
-	public User getUser (String name, String surname, String password) {
+	public User getUser (String name, String surname, String password) throws Exception {
+		
+		if (name.equals(""))
+			throw new Exception("Falta introduir el nom");
+		if (surname.equals(""))
+			throw new Exception("Falta introduir el cognom");
+		if (password.equals(""))
+			throw new Exception("Falta introduir el password");
+		
 		
 		for (User user:repository.getAllUsers()) {
 			

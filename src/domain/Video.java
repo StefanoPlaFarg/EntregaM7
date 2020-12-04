@@ -17,7 +17,9 @@ public class Video {
 	
 	
 	public Video() {
-		
+		this.url = null;
+		this.title = null;	
+		tagsList = new ArrayList<String> ();
 		
 	}
 	
@@ -25,6 +27,7 @@ public class Video {
 
 		this.url = url;
 		this.title = title;
+		tagsList = new ArrayList<String> ();
 
 	}
 
@@ -38,7 +41,9 @@ public class Video {
 	/**
 	 * @param url the url to set
 	 */
-	public void setUrl(String url) {
+	public void setUrl(String url)throws Exception {
+		 if (url.equals(""))
+		throw new Exception("Falta introduir l'url");
 		this.url = url;
 	}
 
@@ -52,7 +57,9 @@ public class Video {
 	/**
 	 * @param title the title to set
 	 */
-	public void setTitle(String title) {
+	public void setTitle(String title) throws Exception {
+		 if (title.equals(""))
+				throw new Exception("Falta introduir el titol");
 		this.title = title;
 	}
 	
@@ -60,6 +67,11 @@ public class Video {
 	
 	return tagsList;
 	
+	}
+	
+	public boolean containsTag (String title ) throws Exception{
+		
+		
 	}
 
 }

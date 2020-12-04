@@ -52,7 +52,9 @@ public String getName() {
 /**
  * @param name the name to set
  */
-public void setName(String name) {
+public void setName(String name) throws Exception  {
+	 if (name.equals(""))
+			throw new Exception("Falta introduir el nom");
 	this.name = name;
 }
 
@@ -66,7 +68,9 @@ public String getSurname() {
 /**
  * @param surname the surname to set
  */
-public void setSurname(String surname) {
+public void setSurname(String surname)throws Exception {
+	if (surname.equals(""))
+		throw new Exception("Falta introduir el cognom");
 	this.surname = surname;
 }
 
@@ -80,7 +84,9 @@ public String getPassword() {
 /**
  * @param password the password to set
  */
-public void setPassword(String password) {
+public void setPassword(String password)throws Exception {
+	if (password.equals(""))
+		throw new Exception("Falta introduir el password");
 	this.password = password;
 }
 

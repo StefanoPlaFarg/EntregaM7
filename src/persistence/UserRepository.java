@@ -29,4 +29,25 @@ public class UserRepository {
 	}
 	
 	
+  public User getUser (String name, String surname, String password) throws Exception {
+	
+	if (name.equals(""))
+		throw new Exception("Falta introduir el nom");
+	if (surname.equals(""))
+		throw new Exception("Falta introduir el cognom");
+	if (password.equals(""))
+		throw new Exception("Falta introduir el password");
+	
+	
+	for (User user:userRepository) {
+		
+		if (user.getName().equals(name)&& user.getSurname().equals(surname)&& user.getPassword().equals(password)) {
+			return user;
+		}
+	}
+	
+	return null;
+}
+	
+	
 }

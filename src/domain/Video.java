@@ -77,6 +77,20 @@ public class Video {
 	
 	}
 	
+	
+	public void addTag (String tag) throws Exception{
+		 if (title.equals(""))
+				throw new Exception("Falta introduir el tag");
+		 
+		 if (containsTag(tag)) {
+			 throw new Exception ("El tag ja existeix");
+		 }
+		
+		
+		
+	}
+	
+	
 	public boolean containsTag (String tag ) throws Exception{
 		if (tag.equals(""))
 			throw new Exception("Falta introduir el tag");

@@ -125,7 +125,9 @@ public void addVideo(String title) throws Exception{
 }
 
 
-public boolean containsVideo(String title) {
+public boolean containsVideo(String title) throws Exception {
+	 if (title.equals(""))
+			throw new Exception("Falta introduir el titol");
 
 	for (Video video : videoList) {
 
@@ -141,8 +143,9 @@ public boolean containsVideo(String title) {
 }
 
 
-public Video getVideoByTitle(String title) {
-
+public Video getVideoByTitle(String title) throws Exception {
+	 if (title.equals(""))
+			throw new Exception("Falta introduir el titol");
 	for (Video video : videoList) {
 
 		if (video.getTitle().equals(title)) {
@@ -156,7 +159,9 @@ public Video getVideoByTitle(String title) {
 
 }
 
-public Video getVideoByUrl(String url) {
+public Video getVideoByUrl(String url) throws Exception{
+	 if (url.equals(""))
+			throw new Exception("Falta introduir l'url");
 	for (Video video : videoList) {
 
 		if (video.getTitle().equals(url)) {

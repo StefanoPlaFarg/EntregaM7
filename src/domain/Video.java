@@ -69,9 +69,28 @@ public class Video {
 	
 	}
 	
-	public boolean containsTag (String title ) throws Exception{
+	public boolean containsTag (String tag ) throws Exception{
+		if (tag.equals(""))
+			throw new Exception("Falta introduir el tag");
+		
+       for (String item:tagsList) {
+			
+			if (item.equals(tag)) {
+				return true;
+			}
+		}
+		
+		return false;
+		
 		
 		
 	}
+	
+	
+	
+		
+		
+	
+
 
 }
